@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="TeacherView.css">
+</head>
+
+<body>
+  <div class="container-fluid mt-1 w-100">
+    <div class="row">
+      <!--   SideNav    -->
+      <nav class="col-md-3 col-lg-2 d-md-blockbg-light sidebar-collapse border-right">
+        <div class="sidebar-sticky pt-3">
+
+          <h4 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span>Teacher</span>
+            <a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report">
+              <span data-feather="plus-circle"></span>
+            </a>
+          </h4>
+          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-1 mb-1 text-muted">
+            <span>Class</span>
+            <a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report">
+              <span data-feather="plus-circle"></span>
+            </a>
+          </h6>
+        </div>
+      </nav>
+      <!--   SideNav    -->
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+        <div
+          class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+          <h1 class="h2">Dashboard</h1>
+          <button class="align-self-end btn blue-bg mb-1 text-white">Logout</button>
+
+        </div>
+        <!--    Basic Stats     -->
+        <div class="row">
+          <div class="col">
+            <div class="card text-center blue-bg text-white">
+              <h4>Total Students</h4>
+              <p>NO_OF_STUDENTS</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card text-center blue-bg text-white">
+              <h4>Assignments</h4>
+              <p>NO_OF_STUDENTS</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card text-center blue-bg text-white">
+              <h4>View Submissions</h4>
+              <p><a href="#" class="text-white">Click Here</a></p>
+            </div>
+          </div>
+        </div>
+        <!--    Basic Stats     -->
+        <hr>
+        <!--   Scrollable Text View    -->
+        <div class="container mt-5 jumbotron pt-1" style="background: rgb(57, 73, 137, .8);" id="text_view">
+          <!--     Dynamically Generated list of cards         -->
+          <div class="card mb-1 p-2">
+            <h5 class="p-0 m-0">TITLE</h5>
+            <p class="p-0 m-0">DESCRIPTION</p>
+          </div>
+          <div class="card mb-1 p-2">
+            <h5 class="p-0 m-0">TITLE</h5>
+            <p class="p-0 m-0">DESCRIPTION</p>
+          </div>
+          <div class="card mb-1 p-2">
+            <h5 class="p-0 m-0">TITLE</h5>
+            <p class="p-0 m-0">DESCRIPTION</p>
+          </div>
+          <div class="card mb-1 p-2">
+            <h5 class="p-0 m-0">TITLE</h5>
+            <p class="p-0 m-0">DESCRIPTION</p>
+          </div>
+          <div class="card mb-1 p-2">
+            <h5 class="p-0 m-0">TITLE</h5>
+            <p class="p-0 m-0">DESCRIPTION</p>
+          </div>
+          <div class="card mb-1 p-2">
+            <h5 class="p-0 m-0">TITLE</h5>
+            <p class="p-0 m-0">DESCRIPTION</p>
+          </div>
+          <div class="card mb-1 p-2">
+            <h5 class="p-0 m-0">TITLE</h5>
+            <p class="p-0 m-0">DESCRIPTION</p>
+          </div>
+          <div class="card mb-1 p-2">
+            <h5 class="p-0 m-0">TITLE</h5>
+            <p class="p-0 m-0">DESCRIPTION</p>
+          </div>
+          <div class="card mb-1 p-2">
+            <h5 class="p-0 m-0">TITLE</h5>
+            <p class="p-0 m-0">DESCRIPTION</p>
+          </div>
+          <div class="card mb-1 p-2">
+            <h5 class="p-0 m-0">TITLE</h5>
+            <p class="p-0 m-0">DESCRIPTION</p>
+          </div>
+          <div class="card mb-1 p-2">
+            <h5 class="p-0 m-0">TITLE</h5>
+            <p class="p-0 m-0">DESCRIPTION</p>
+          </div>
+
+          <!--     Dynamically Generated list of cards         -->
+        </div>
+        <div class="card w-25 none" id="popup">
+          <form class="p-1" id="Assignment-form" action="#" method='POST'>
+            <div class="card-title">
+              <input type="text" name="title" id="" class="w-100" placeholder="Title" required>
+              <div class="invalid-feedback">
+                Please enter a title.
+              </div>
+              <textarea name="details" id="" cols="" rows="10" placeholder="Details" class="w-100 p-2 mt-2"
+                required></textarea>
+            </div>
+            <input type="submit" value="Add Assignment" class="btn btn-success w-100" id="submit_assignments">
+          </form>
+        </div>
+        <button class="btn blue-bg text-white" id="add_button"><span id="add_plus">+</span></button>
+        <!--   Scrollable Text View    -->
+
+        <hr>
+        <!--   File upload   -->
+        <form class="p-1">
+          <h2>Upload file here</h2>
+          <input type="file" name="upload" id="" required>
+          <br>
+          <input type="submit" value="Upload" class="btn blue-bg text-white mt-2">
+        </form>
+        <!--   File upload   -->
+        <hr>
+        <!--   SMS Text Area    -->
+        <form action="#" method=POST>
+          <label for="SMS message">
+            <h3 class="m-0 p-0">Send SMS</h3>
+          </label>
+          <textarea name="SMS message" id="" cols="30" rows="10" placeholder="Type the SMS message here"
+            class="form-control mt-4" required></textarea>
+          <input type="submit" value="Send" class="btn blue-bg text-white mt-2 ">
+        </form>
+        <!--   SMS Text Area    -->
+
+      </main>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+
+</body>
+<footer class="panel-footer">
+    <div class="container">
+      <div class="row">
+        <section id="hours" class="col-sm-4">
+          <span>SOCIAL NETWORK</span><br>
+          <a href="https://www.facebook.com/tbdf.india/"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/wix"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/tbdf.india/"><i class="fab fa-instagram"></i></a>
+          <hr class="visible-xs">
+        </section>
+        <section id="address" class="col-sm-4">
+          <span>VISIT
+US</span><br>
+325, 5th Main,</br>
+
+<br>1st Block Koramangala,</br>
+
+<br>Bangalore 560034, India</br>
+
+          <hr class="visible-xs">
+        </section>
+        <section id="testimonials" class="col-sm-4">
+          <span>CONTACT US
+
+          </span>
+        </br>
+          <br>Mob: +91 99629 85135</br>
+
+ <br>Tel : +91 80 414 68425 </br>
+
+​
+
+<br>contact@thebetterdesign.org</br>
+
+​
+        </section>
+      </div>
+      <div class="text-center">&copy; 2020 The Better Design Foundation</div>
+    </div>
+  </footer>
+
+</html>
+
+
+
+
+<!--
+ <article class='container  h-100 bg-secondary'  id="side_nav">
+        <div class="container">
+            <h1>Teacher</h1>
+            <h3>NAME_OF_TEACHER</h3>
+        </div>
+    </article>
+    <main>
+
+    </main>-->

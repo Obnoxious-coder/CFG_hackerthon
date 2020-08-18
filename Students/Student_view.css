@@ -1,0 +1,91 @@
+#text_view {
+    overflow: scroll;
+    height: 50vh;
+}
+
+#add_button {
+    border-radius: 100%;
+    box-sizing: border-box;
+}
+
+#add_plus {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#AAssignment-form {
+    overflow: scroll;
+}
+
+#upload_button{
+    width : 20%;
+}
+
+#video{
+    width:100%;
+    height:100%;
+}
+
+#video_card{
+
+    height:500px;
+}
+
+.none {
+    display: none;
+}
+
+.input {
+    width: 80px;
+  }
+
+.blue-bg {
+    background-color: #394989;
+}
+
+input[type=submit].blue-bg:hover,
+button.blue-bg:hover {
+background-color: #fddb3a;
+}
+
+.yellow-bg {
+background-color: #fddb3a;
+}
+
+.black-bg {
+background-color: #222;
+}
+
+
+
+
+/* footer */
+
+/* start of footer */
+.panel-footer {
+  color: white;
+  margin-top: 30px;
+  padding-top: 35px;
+  padding-bottom: 30px;
+  background-color: #222;
+  border-top: 0;
+}
+.panel-footer div.row {
+  margin-bottom: 35px;
+}
+#hours, #address {
+  line-height: 2;
+}
+#hours > span, #address > span {
+  font-size: 1.3em;
+}
+#address p {
+  color: #557c3e;
+  font-size: .8em;
+  line-height: 1.8;
+}
+
+#testimonials p:nth-child(2) {
+  margin-top: 25px;
+}
+/* end of footer */
